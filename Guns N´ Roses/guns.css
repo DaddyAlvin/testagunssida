@@ -1,0 +1,227 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.Rubrik-container {
+    margin: 30px;
+}
+
+.logga-container {
+    border-top: 5px solid #FFD700;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin: 75px 0;
+    position: relative;
+    background: linear-gradient(to bottom, #006400 0%, transparent 100%);
+    padding: 50px 0;
+    border-radius: 10px;
+}
+
+.logga-container img {
+    z-index: 1;
+    position: relative;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.8));
+}
+
+.album img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.5);
+}
+
+.album p {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.album-left,
+.album-right {
+    gap: 40px;
+}
+
+
+.info-section {
+    position: relative;
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 800px;
+    text-align: center;
+    background: url('Guns.png') center/cover no-repeat;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
+    font-family: 'Copperplate', serif;
+}
+
+.info-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.info-section h1,
+.info-section p {
+    position: relative;
+    color: #FFD700;
+    text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.7);
+}
+
+.info-section h1 {
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.info-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.link-container a {
+    color: #FFD700;
+    text-decoration: none;
+    font-family: 'Copperplate', serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #2C2C2C, #000);
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-container a:hover {
+    background: linear-gradient(145deg, #034203, #036403);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(255, 69, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+#countdown {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFD700; 
+    background: url('Tour.png') center/cover no-repeat; 
+    padding: 15px;
+    margin: 30px auto;
+    width: 50%; 
+    height: 300px; 
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
+    position: relative;
+}
+
+#countdown::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+}
+
+#countdown p, #timer {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    body,
+    html {
+        flex-direction: column;
+    }
+
+    .Rubrik-container {
+        margin: 20px;
+    }
+
+    .logga-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .album img {
+        width: 150px;
+    }
+
+    .info-section {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .link-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #countdown {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logga-container {
+        gap: 10px;
+    }
+
+    .album img {
+        width: 120px;
+    }
+
+    .info-section h1 {
+        font-size: 24px;
+    }
+
+    .info-section p {
+        font-size: 16px;
+    }
+
+    .link-container a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
